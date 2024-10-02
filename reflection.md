@@ -2,3 +2,7 @@ Use this file to record your reflection on this assignment.
 
 - What are your initial impressions of how `Encapsulation` affects your programming?
 - What worked, what didn't, what advice would you give someone taking this course in the future?
+
+At first I was confused about the difference between public and private attributes and why it mattered who could read what. Then, in office hours, Ab explained to me that "Say you're boarding a train and you have an attribute which is your name. The car needs to access your name in order to make the manifest, but it does not have the authority to legally change your own name. Only you can do that, therefore your name is private to you". This analogy helped me understand encapsulation a lot more. It affects my programming because I need to make an accessor for every attribute I create, but it also gives me the peace of mind that I'm not giving undue edit access to certain attributes. 
+
+I was extremely confused by the enum EnergyType, and I feel like it didn't add much to this assignment. I misidentified certain errors as being caused by EnergyType instead of a simple explanation. I feel like this aspect of the assignment didn't work, and it should be removed in the future. Otherwise, I feel like this was a very well designed hands-on example of how certain classes relate to each other and all work together to create an overall train. Going to Office Hours (especially working on the assignment *in* office hours, where I could have easy access to help), was especially useful. 
