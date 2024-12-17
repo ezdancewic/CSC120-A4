@@ -51,10 +51,14 @@ public class Car {
      */
     public boolean addPassenger(Passenger p){
       if(seatsRemaining() > 0){
-        passengers.add(p);
-        System.out.println("passenger added");
-        return true;
-      }  
+        if(this.passengers.contains(p)){
+            passengers.add(p);
+            System.out.println("passenger added");
+            return true;
+        } else {
+            return false;
+        }
+       }  
       else{
         return false;
       }
@@ -62,7 +66,7 @@ public class Car {
     }
 
     /**
-     * A method which returns a specific passenger from a specific car
+     * A method which removes a specific passenger from a specific car
      * @param p the passenger to remove
      * @return T if the passenger was successfully removed (only if the passenger was actually in the car) and F if they weren't removed
      */ 

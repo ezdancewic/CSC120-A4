@@ -28,12 +28,17 @@ public class Passenger {
      * @param c the car that the passenger is boarding 
      */
     public void boardCar(Car c){
-        if(c.addPassenger(this)){
-            System.out.println("Passenger added.");
+        try{
+            if(c.addPassenger(this)){
+                System.out.println("Passenger added.");
+            }
+            else{
+                System.out.println("This car is full.");
+            }
+        } catch(Exception e) {
+            System.out.println("Something went wrong: " + e);
         }
-        else{
-            System.out.println("This car is full.");
-        }
+        
     }
 
     /** 
@@ -41,12 +46,17 @@ public class Passenger {
      * @param c the car that the passenger is leaving 
      */
     public void getOffCar(Car c){
-        if(c.removePassenger(this)){
-            System.out.println("Passenger removed.");
-        } 
-        else{
-            System.out.println("This passenger is not in this car.");
+        try{
+            if(c.removePassenger(this)){
+                System.out.println("Passenger removed.");
+            } 
+            else{
+                System.out.println("This passenger is not in this car.");
+            }
+        } catch(Exception e) {
+            System.out.println("Something went wrong: " + e);
         }
+        
     }
 
 }

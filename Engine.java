@@ -55,10 +55,10 @@ public class Engine {
      * A method that starts the train, gradually depleting the fuel level and printing out the remaining fuel level
      * @return T if there is fuel left in the tank, F if there isn't
      */
-    public boolean go(){
-        this.current_fuel_level -= 10.0; 
-        System.out.println("Remaining fuel level:" + current_fuel_level);
+    public boolean go(){ 
         if (this.current_fuel_level > 0){
+            this.current_fuel_level -= 10.0;
+            System.out.println("Remaining fuel level:" + current_fuel_level);
             return true;
         }
         else{
